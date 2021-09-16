@@ -1,17 +1,19 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $db_name = "myDB";
 
-try {
-  $db = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
-  // set the PDO error mode to exception
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+// try {
+//   $db = new PDO("mysql:host=$servername;dbname=$db_name", $username, $password);
+//   // set the PDO error mode to exception
+//   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
-} catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
-}
+// } catch(PDOException $e) {
+//   echo "Connection failed: " . $e->getMessage();
+// }
 
 
 
