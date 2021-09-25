@@ -1,0 +1,23 @@
+# Disable directory browsing 
+Options -Indexes
+
+# Deny access to filenames starting with dot(.)
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+#Custom URLs
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#Prevent extention to non-extention
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,NE,L]
+
+ErrorDocument 404 http://localhost/PetShop/errors/404.php
+ErrorDocument 403 http://localhost/PetShop/errors/403.php
+
+
+DirectoryIndex home.php

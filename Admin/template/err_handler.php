@@ -1,3 +1,1 @@
-<?php
-
-echo "This Error Page";
+<?php if (!defined('err_file')) {exit("Page Not Found!!!");} ?>
